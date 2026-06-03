@@ -3,6 +3,11 @@ const textoDoCodigo = `<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <title>Olá Mundo</title>
+    <style>
+        body {
+            color: #333;
+        }
+    </style>
 </head>
 <body>
     <h1>Olá Mundo!</h1>
