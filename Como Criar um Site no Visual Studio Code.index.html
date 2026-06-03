@@ -65,35 +65,40 @@
     </ol>
 </section>
     
-<section id="codigo" style="max-width: 700px; margin: 20px auto; font-family: sans-serif; padding: 20px; background-color: #f8f9fa; border-radius: 8px;">
+<section id="secao-codigo" style="max-width: 700px; margin: 20px auto; font-family: sans-serif; padding: 20px; background-color: #f8f9fa; border-radius: 8px;">
     <h2>3. Estrutura Básica do HTML</h2> 
 
-    <div class="codigo" style="margin-top: 15px; position: relative;">
-        <!-- Bloco que renderiza o texto do código de forma limpa na tela -->
-        <pre id="codigoOlaMundo" style="background-color: #282c34; color: #abb2bf; padding: 20px; border-radius: 6px; font-family: monospace; font-size: 14px; overflow-x: auto; margin: 0; line-height: 1.5;">&lt;!DOCTYPE html&gt;
-&lt;html lang="pt-BR&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Olá Mundo&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;index.htm&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+    <div class="codigo" style="margin-top: 15px;">
+        <!-- Quadro onde o código será injetado à força pelo JavaScript -->
+        <pre id="codigoOlaMundo" style="background-color: #282c34; color: #abb2bf; padding: 20px; border-radius: 6px; font-family: monospace; font-size: 14px; overflow-x: auto; margin: 0; line-height: 1.5; min-height: 140px; white-space: pre;"></pre>
         
-        <!-- Botão de ação posicionado logo abaixo do bloco -->
-        <button onclick="copiarTexto(this, 'codigoOlaMundo')" style="margin-top: 10px; padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: bold; transition: background 0.2s; display: inline-block;">
+        <!-- Botão de cópia -->
+        <button onclick="copiarTexto(this, 'codigoOlaMundo')" style="margin-top: 10px; padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: bold; transition: background 0.2s;">
             Copiar Código
         </button>
     </div>
 </section>
 
-<!-- Insira esta tag script antes do fechamento do seu </body> para o botão funcionar -->
 <script>
+// O texto exato que vai aparecer dentro do quadro preto
+const textoDoCodigo = `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Olá Mundo</title>
+</head>
+<body>
+    <h1>index.htm</h1>
+</body>
+</html>`;
+
+// Injeta o texto de forma segura assim que a página carrega
+document.getElementById('codigoOlaMundo').textContent = textoDoCodigo;
+
+// Função do botão copiar
 function copiarTexto(botao, idElemento) {
-    var elementoCódigo = document.getElementById(idElemento);
-    // Captura o texto interno exatamente como ele aparece na tela
-    var textoParaCopiar = elementoCódigo.innerText || elementoCódigo.textContent;
+    var elementoCodigo = document.getElementById(idElemento);
+    var textoParaCopiar = elementoCodigo.textContent;
 
     navigator.clipboard.writeText(textoParaCopiar).then(function() {
         var textoOriginal = botao.innerHTML;
@@ -109,6 +114,7 @@ function copiarTexto(botao, idElemento) {
     });
 }
 </script>
+
 
 
 
