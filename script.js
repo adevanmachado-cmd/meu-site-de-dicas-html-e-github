@@ -5,7 +5,10 @@ const textoDoCodigo = `<!DOCTYPE html>
     <title>Olá Mundo</title>
     <style>
         body {
-            color: #333;
+            color: #000000;
+        }
+        h1 {
+            color: #000000;
         }
     </style>
 </head>
