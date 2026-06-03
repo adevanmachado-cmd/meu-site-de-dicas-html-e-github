@@ -4,17 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Como Criar um Site no Visual Studio Code</title>
-  <style>
-    <!  <textarea id="codigoOlaMundo" readonly style="width: 100%; height: 200px; padding: 12px; background-color: #ffffff; color: #000000; border: 1px solid #e4e4e7; border-radius: 6px; font-family: monospace; font-size: 14px;"><!DOCTYPE html>
-<html>
-<head>
-    <title>Olá Mundo</title>
-      </style>
-</head>
-<body>
-    <h1>Olá Mundo!</h1>
-</body>
-</html></textarea>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #0056b3;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        .codigo {
+            background-color: #f8f9fa;
+            border: 2px solid #e4e4e7;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        .codigo pre {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            border: 2px solid #e4e4e7;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            resize: vertical;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-copiar {
+            background-color: #000000;
+            color: white;
+        }
+
+        .btn-copiar:hover {
+            background-color: #333;
+        }
+
+        .btn-link {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-link:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-concluir {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-concluir:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+
+        .imagem-site {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        ul, ol {
+            line-height: 2;
+        }
+
+        strong {
+            color: #007bff;
+        }
+    </style>
     <!-- ESTA LINHA ABAIXO FAZ A DIREÇÃO PARA O ARQUIVO CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- LINK PARA O ARQUIVO JAVASCRIPT - ESSENCIAL PARA O GITHUB PAGES -->
@@ -71,16 +207,23 @@
     </ol>
 </section>
 
-<section id="secao-codigo" style="max-width: 700px; margin: 20px auto; font-family: sans-serif; padding: 20px; background-color: #ffffff; border-radius: 8px;">
+<section id="secao-codigo">
     <h2>3. Estrutura Básica do HTML</h2>
     <p>Copie e cole o código abaixo no seu arquivo <strong>index.html</strong>:</p>
     
-    <div class="codigo" style="margin-top: 15px;">
-        <!-- Textarea para exibir o código HTML -->
-
+    <div class="codigo">
+        <textarea id="codigoOlaMundo" readonly rows="12"><!DOCTYPE html>
+<html>
+<head>
+    <title>Olá Mundo</title>
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+</body>
+</html></textarea>
         
         <!-- Botão de cópia -->
-        <button onclick="copiarTexto(this, 'codigoOlaMundo')" style="margin-top: 10px; padding: 10px 20px; background-color: #000000; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
+        <button class="btn-copiar" onclick="copiarTexto(this, 'codigoOlaMundo')">
             Copiar Código
         </button>
     </div>
@@ -104,11 +247,11 @@
     <ol>
         <li>Crie um repositório público.</li>
         <li>Abra o terminal do VS Code.</li>
-        <li>Digite:</li>
+        <li>Digite os comandos abaixo:</li>
     </ol>
 
-    <div class="codigo" style="max-width: 600px; margin: 20px auto; padding: 15px; background-color: #ffffff; border: 1px solid #e4e4e7; border-radius: 6px;">
-<pre style="color: #000000; background-color: #ffffff; padding: 10px; overflow-x: auto;">git init
+    <div class="codigo">
+        <pre>git init
 git add .
 git commit -m "Primeira versão"
 git branch -M main
@@ -127,12 +270,12 @@ git push -u origin main</pre>
 
     <p>Após alguns minutos, o GitHub fornecerá seu endereço. Use o campo abaixo para copiar o exemplo do link:</p>
 
-    <div class="codigo" style="max-width: 600px; margin: 20px auto; font-family: sans-serif;">
+    <div class="codigo">
         <!-- CAMPO DO LINK DO SITE -->
-        <textarea id="linkGitHub" readonly style="width: 100%; height: 45px; padding: 12px; background-color: #ffffff; color: #000000; border: 1px solid #cccccc; border-radius: 6px; font-family: monospace; font-size: 14px;">https://adevanmachado-cmd.github.io/meu-site</textarea>
+        <textarea id="linkGitHub" readonly rows="2">https://seunomedeusuario.github.io/nome-do-repositorio</textarea>
         
         <!-- Botão de ação para o link -->
-        <button onclick="copiarLink(this, 'linkGitHub')" style="margin-top: 8px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
+        <button class="btn-link" onclick="copiarLink(this, 'linkGitHub')">
             Copiar Link
         </button>
     </div>
@@ -149,7 +292,7 @@ git push -u origin main</pre>
         <li>Mapa do Google Maps</li>
     </ul>
     <br>
-    <button onclick="mostrarMensagem()" style="padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
+    <button class="btn-concluir" onclick="mostrarMensagem()">
         Concluir Curso
     </button>
     <p id="mensagem"></p>
