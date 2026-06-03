@@ -13,7 +13,7 @@ const textoDoCodigo = `<!DOCTYPE html>
 document.addEventListener("DOMContentLoaded", () => {
     const campoCodigo = document.getElementById('codigoOlaMundo');
     if (campoCodigo) {
-        campoCodigo.textContent = textoDoCodigo;
+        campoCodigo.value = textoDoCodigo;
     }
     
     // Adiciona o link do GitHub Pages ao textarea
@@ -27,7 +27,7 @@ function copiarTexto(botao, idElemento) {
     const elemento = document.getElementById(idElemento);
     if (!elemento) return;
     
-    const textoParaCopiar = elemento.textContent;
+    const textoParaCopiar = elemento.value;
     const textoOriginal = botao.innerHTML;
 
     navigator.clipboard.writeText(textoParaCopiar).then(() => {
