@@ -65,12 +65,12 @@
     </ol>
 </section>
     
-<section id="secao-codigo" style="max-width: 700px; margin: 20px auto; font-family: sans-serif; padding: 20px; background-color: #f8f9fa; border-radius: 8px;">
-    <h2>3. Estrutura Básica do HTML</h2> 
+<section id="secao-codigo" style="max-width: 700px; margin: 20px auto; font-family: sans-serif; padding: 20px; background-color: #ffffff; border-radius: 8px;">
+    <h2 style="color: #333333;">3. Estrutura Básica do HTML</h2> 
 
     <div class="codigo" style="margin-top: 15px;">
-        <!-- Quadro onde o código será injetado à força pelo JavaScript -->
-        <pre id="codigoOlaMundo" style="background-color: #282c34; color: #abb2bf; padding: 20px; border-radius: 6px; font-family: monospace; font-size: 14px; overflow-x: auto; margin: 0; line-height: 1.5; min-height: 140px; white-space: pre;"></pre>
+        <!-- DESTAQUE BLUE: Fundo azul escuro e texto branco -->
+        <pre id="codigoOlaMundo" style="background-color: #0f172a; color: #ffffff; padding: 20px; border: 1px solid #1e293b; border-radius: 6px; font-family: monospace; font-size: 14px; overflow-x: auto; margin: 0; line-height: 1.5; min-height: 140px; white-space: pre;"></pre>
         
         <!-- Botão de cópia -->
         <button onclick="copiarTexto(this, 'codigoOlaMundo')" style="margin-top: 10px; padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: bold; transition: background 0.2s;">
@@ -80,7 +80,6 @@
 </section>
 
 <script>
-// O texto exato que vai aparecer dentro do quadro preto
 const textoDoCodigo = `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -92,10 +91,8 @@ const textoDoCodigo = `<!DOCTYPE html>
 </body>
 </html>`;
 
-// Injeta o texto de forma segura assim que a página carrega
 document.getElementById('codigoOlaMundo').textContent = textoDoCodigo;
 
-// Função do botão copiar
 function copiarTexto(botao, idElemento) {
     var elementoCodigo = document.getElementById(idElemento);
     var textoParaCopiar = elementoCodigo.textContent;
@@ -109,11 +106,10 @@ function copiarTexto(botao, idElemento) {
             botao.innerHTML = textoOriginal;
             botao.style.backgroundColor = "#28a745";
         }, 2000);
-    }).catch(function(err) {
-        console.error('Erro ao copiar: ', err);
     });
 }
 </script>
+
 
 
 
