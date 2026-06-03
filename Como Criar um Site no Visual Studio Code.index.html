@@ -19,29 +19,24 @@
 <nav>
     <a href="#instalacao">Instalação</a>
     <a href="#projeto">Projeto</a>
-    <a href="#codigo">Código HTML</a>
+    <a href="#secao-codigo">Código HTML</a>
     <a href="#github">GitHub</a>
 </nav>
 
 <section id="instalacao">
-    <h2>1. Instalação dos Programas</h2> 
-
+    <h2>1. Instalação dos Programas</h2>
     <p><strong>Visual Studio Code</strong></p>
     <ul>
         <li>Baixe e instale o VS Code.</li>
         <li>É um editor gratuito utilizado para desenvolver sites.</li>
     </ul>
-
     <br>
-
     <p><strong>Git</strong></p>
     <ul>
         <li>Instale o Git para enviar arquivos ao GitHub.</li>
         <li>Mantenha as configurações padrão durante a instalação.</li>
     </ul>
-
     <br>
-
     <p><strong>GitHub</strong></p>
     <ul>
         <li>Crie uma conta gratuita.</li>
@@ -50,8 +45,7 @@
 </section>
 
 <section id="projeto">
-    <h2>2. Criando o Projeto</h2> 
-
+    <h2>2. Criando o Projeto</h2>
     <ol>
         <li>Crie uma pasta chamada <strong>meu-site</strong>.</li>
         <li>Abra a pasta no Visual Studio Code.</li>
@@ -64,88 +58,35 @@
         </li>
     </ol>
 </section>
-    
-<section id="secao-codigo" style="max-width: 700px; margin: 20px auto; font-family: sans-serif; padding: 20px; background-color: #ffffff; border-radius: 8px;">
-    <h2 style="color: #333333;">3. Estrutura Básica do HTML</h2> 
 
+<section id="secao-codigo" style="max-width: 700px; margin: 20px auto; font-family: sans-serif; padding: 20px; background-color: #ffffff; border-radius: 8px;">
+    <h2 style="color: #333333;">3. Estrutura Básica do HTML</h2>
     <div class="codigo" style="margin-top: 15px;">
-        <!-- DESTAQUE BLUE: Fundo azul escuro e texto branco -->
-        <pre id="codigoOlaMundo" style="background-color: #000000; color: #ffffff; padding: 20px; border: 1px solid #1e293b; border-radius: 6px; font-family: monospace; font-size: 14px; overflow-x: auto; margin: 0; line-height: 1.5; min-height: 140px; white-space: pre;"></pre>
+        <!-- Bloco com fundo cinza claro e texto na cor preta -->
+        <pre id="codigoOlaMundo" style="background-color: #f4f4f5; color: #000000; padding: 20px; border: 1px solid #e4e4e7; border-radius: 6px; font-family: monospace; font-size: 14px; overflow-x: auto; margin: 0; line-height: 1.5; min-height: 140px; white-space: pre;"></pre>
         
         <!-- Botão de cópia -->
         <button onclick="copiarTexto(this, 'codigoOlaMundo')" style="margin-top: 10px; padding: 10px 20px; background-color: #000000; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: bold; transition: background 0.2s;">
             Copiar Código
         </button>
     </div>
-</section>
-
-<script>
-const textoDoCodigo = `<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Olá Mundo</title>
-</head>
-<body>
-    <h1>index.htm</h1>
-</body>
-</html>`;
-
-document.getElementById('codigoOlaMundo').textContent = textoDoCodigo;
-
-function copiarTexto(botao, idElemento) {
-    var elementoCodigo = document.getElementById(idElemento);
-    var textoParaCopiar = elementoCodigo.textContent;
-
-    navigator.clipboard.writeText(textoParaCopiar).then(function() {
-        var textoOriginal = botao.innerHTML;
-        botao.innerHTML = "Copiado!";
-        botao.style.backgroundColor = "#007bff";
-        
-        setTimeout(function() {
-            botao.innerHTML = textoOriginal;
-            botao.style.backgroundColor = "#000000";
-        }, 2000);
-    });
-}
-</script>
-
-
-
-
-
+    <br>
     <p>
         O arquivo <strong>index.html</strong> é a página principal do site.
     </p>
 </section>
 
-<section id="meu-jogo">
-    <h2>Meu Projeto do Scratch</h2>
-    <p>Jogue a minha criação direto por aqui:</p>
-    
-    <!-- COLE O CÓDIGO EMBUTIDO DO SCRATCH AQUI EMBAIXO -->
-    <iframe src="https://mit.edu" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-</section>
-
 <section>
-    <h2>4. Visualizando o Site</h2> 
-
-    <p>
-        Instale a extensão <strong>Live Server</strong> no VS Code.
-    </p>
-
+    <h2>4. Visualizando o Site</h2>
+    <p>Instale a extensão <strong>Live Server</strong> no VS Code.</p>
     <ul>
         <li>Clique em Extensões.</li>
         <li>Pesquise por Live Server.</li>
-        <li>Instale a extensão.</li>
-        <li>Clique com o botão direito em index.html.</li>
-        <li>Escolha "Open with Live Server".</li>
     </ul>
 </section>
 
 <section id="github">
-    <h2>5. Publicando no GitHub Pages</h2> 
-
+    <h2>5. Publicando no GitHub Pages</h2>
     <ol>
         <li>Crie um repositório público.</li>
         <li>Abra o terminal do VS Code.</li>
@@ -162,13 +103,8 @@ git remote add origin URL_DO_REPOSITORIO
 git push -u origin main
 </pre>
     </div>
-
     <br>
-
-    <p>
-        Depois vá em:
-    </p>
-
+    <p>Depois vá em:</p>
     <ul>
         <li>Settings</li>
         <li>Pages</li>
@@ -177,18 +113,15 @@ git push -u origin main
         <li>Pasta: /(root)</li>
     </ul>
 
-    <p>
-        Após alguns minutos, o GitHub fornecerá seu endereço. Use o campo abaixo para copiar o exemplo do link:
-    </p>
+    <p>Após alguns minutos, o GitHub fornecerá seu endereço. Use o campo abaixo para copiar o exemplo do link:</p>
 
     <div class="codigo">
         <div class="codigo-box" style="max-width: 600px; margin: 20px auto; font-family: sans-serif;">
-            
-            <!-- CAMPO DO LINK DO SITE (Insira o seu link de exemplo ou final aqui dentro) -->
+            <!-- CAMPO DO LINK DO SITE -->
             <textarea id="linkGitHub" readonly style="width: 100%; height: 45px; padding: 12px; background-color: #282c34; color: #abb2bf; border: 1px solid #181a1f; border-radius: 6px; font-family: monospace; font-size: 14px; resize: none; box-sizing: border-box; overflow: hidden;">https://github.io</textarea>
             
             <!-- Botão de ação para o link -->
-            <button onclick="copiarTexto(this, 'linkGitHub')" style="margin-top: 8px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: bold; transition: background 0.2s;">
+            <button onclick="copiarLink(this, 'linkGitHub')" style="margin-top: 8px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: bold; transition: background 0.2s;">
                 Copiar Link
             </button>
         </div>
@@ -196,10 +129,8 @@ git push -u origin main
 </section>
 
 <section>
-    <h2>Desafio Final</h2> 
-
+    <h2>Desafio Final</h2>
     <p>Adicione ao seu site:</p>
-
     <ul>
         <li>Menu de navegação</li>
         <li>Imagens</li>
@@ -207,13 +138,10 @@ git push -u origin main
         <li>Formulário de contato</li>
         <li>Mapa do Google Maps</li>
     </ul>
-
     <br>
-
     <button onclick="mostrarMensagem()">
         Concluir Curso
     </button>
-
     <p id="mensagem"></p>
 </section>
 
@@ -221,32 +149,60 @@ git push -u origin main
     <p>Guia de Introdução ao Desenvolvimento Web com VS Code e GitHub Pages</p>
 </footer>
 
-<!-- A tag abaixo foi corrigida com o caminho completo no src e a descrição no alt -->
-<img src="/home/adevan12/Área de trabalho/Meu primeiro site Olá mundo/imagens/Link para WhatsApp Image 2026-05-27 at 13.27.38.jpeg" alt="Imagem do WhatsApp" class="imagem-site">
+<!-- Imagem interna do projeto -->
+<img src="imagens/whatsapp-image.jpeg" alt="Imagem do WhatsApp" class="imagem-site">
 
-<!-- JavaScript Unificado para gerenciar as duas caixas de cópia -->
+<!-- JavaScript Unificado -->
 <script>
+    // Texto do exemplo corrigido para exibir Olá Mundo no H1
+    const textoDoCodigo = `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Olá Mundo</title>
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+</body>
+</html>`;
+
+    // Insere o código na tela assim que a página carrega
+    document.getElementById('codigoOlaMundo').textContent = textoDoCodigo;
+
+    // Função para copiar textos de elementos comuns (ex: <pre>)
     function copiarTexto(botao, idElemento) {
+        const elemento = document.getElementById(idElemento);
+        const textoParaCopiar = elemento.textContent;
+        const textoOriginal = botao.innerHTML;
+
+        navigator.clipboard.writeText(textoParaCopiar).then(() => {
+            botao.innerHTML = "✓ Copiado!";
+            botao.style.backgroundColor = "#218838";
+            setTimeout(() => {
+                botao.innerHTML = textoOriginal;
+                botao.style.backgroundColor = "#000000";
+            }, 2000);
+        });
+    }
+
+    // Função para copiar textos de elementos de formulário (ex: <textarea>)
+    function copiarLink(botao, idElemento) {
         const textarea = document.getElementById(idElemento);
-        const corOriginal = botao.style.backgroundColor;
         const textoOriginal = botao.innerText;
         
         navigator.clipboard.writeText(textarea.value).then(() => {
             botao.innerText = "✓ Copiado!";
             botao.style.backgroundColor = "#218838";
-            
             setTimeout(() => {
                 botao.innerText = textoOriginal;
-                botao.style.backgroundColor = corOriginal;
+                botao.style.backgroundColor = "#007bff";
             }, 2000);
-        }).catch(err => {
-            console.error("Erro ao copiar: ", err);
         });
     }
 
     function mostrarMensagem(){
         document.getElementById("mensagem").innerHTML = 
-        "Parabéns! Você já conhece os passos básicos para criar e publicar um site.";
+        "<strong>Parabéns!</strong> Você já conhece os passos básicos para criar e publicar um site.";
     }
 </script>
 
