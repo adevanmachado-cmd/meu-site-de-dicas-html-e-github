@@ -71,7 +71,7 @@
     <div class="codigo">
         <div class="codigo-box" style="max-width: 600px; margin: 20px auto; font-family: sans-serif;">
             
-            <!-- Caixa de texto com o Olá Mundo (caracteres especiais convertidos para o navegador ler como texto) -->
+            <!-- CAMPO DO CÓDIGO OLÁ MUNDO -->
             <textarea id="codigoOlaMundo" readonly style="width: 100%; height: 160px; padding: 15px; background-color: #282c34; color: #abb2bf; border: 1px solid #181a1f; border-radius: 6px; font-family: monospace; font-size: 14px; resize: none; box-sizing: border-box;">&lt;!DOCTYPE html&gt;
 &lt;html lang="pt-BR"&gt;
 &lt;head&gt;
@@ -83,32 +83,10 @@
 &lt;/body&gt;
 &lt;/html&gt;</textarea>
             
-            <!-- Botão de ação -->
-            <button onclick="copiarCodigoDoSite(this)" style="margin-top: 8px; padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: bold; transition: background 0.2s;">
+            <!-- Botão de ação para o código -->
+            <button onclick="copiarTexto(this, 'codigoOlaMundo')" style="margin-top: 8px; padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: bold; transition: background 0.2s;">
                 Copiar Código
             </button>
-
-            <!-- Script que faz a mágica de copiar -->
-            <script>
-                function copiarCodigoDoSite(botao) {
-                    const textarea = document.getElementById("codigoOlaMundo");
-                    
-                    // Copia o texto para a área de transferência
-                    navigator.clipboard.writeText(textarea.value).then(() => {
-                        // Efeito visual de sucesso no botão
-                        botao.innerText = "✓ Copiado!";
-                        botao.style.backgroundColor = "#218838";
-                        
-                        // Volta ao normal depois de 2 segundos
-                        setTimeout(() => {
-                            botao.innerText = "Copiar Código";
-                            botao.style.backgroundColor = "#28a745";
-                        }, 2000);
-                    }).catch(err => {
-                        console.error("Erro ao copiar: ", err);
-                    });
-                }
-            </script>
         </div>
     </div>
 
@@ -122,7 +100,7 @@
     <p>Jogue a minha criação direto por aqui:</p>
     
     <!-- COLE O CÓDIGO EMBUTIDO DO SCRATCH AQUI EMBAIXO -->
-    <iframe src="https://scratch.mit.edu/projects/1325244048" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <iframe src="https://mit.edu" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
 </section>
 
 <section>
@@ -176,13 +154,20 @@ git push -u origin main
     </ul>
 
     <p>
-        Após alguns minutos, o GitHub fornecerá um endereço semelhante a:
+        Após alguns minutos, o GitHub fornecerá seu endereço. Use o campo abaixo para copiar o exemplo do link:
     </p>
 
     <div class="codigo">
-<pre>
-https://github.io
-</pre>
+        <div class="codigo-box" style="max-width: 600px; margin: 20px auto; font-family: sans-serif;">
+            
+            <!-- CAMPO DO LINK DO SITE (Insira o seu link de exemplo ou final aqui dentro) -->
+            <textarea id="linkGitHub" readonly style="width: 100%; height: 45px; padding: 12px; background-color: #282c34; color: #abb2bf; border: 1px solid #181a1f; border-radius: 6px; font-family: monospace; font-size: 14px; resize: none; box-sizing: border-box; overflow: hidden;">https://github.io</textarea>
+            
+            <!-- Botão de ação para o link -->
+            <button onclick="copiarTexto(this, 'linkGitHub')" style="margin-top: 8px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: bold; transition: background 0.2s;">
+                Copiar Link
+            </button>
+        </div>
     </div>
 </section>
 
@@ -215,11 +200,30 @@ https://github.io
 <!-- A tag abaixo foi corrigida com o caminho completo no src e a descrição no alt -->
 <img src="/home/adevan12/Área de trabalho/Meu primeiro site Olá mundo/imagens/Link para WhatsApp Image 2026-05-27 at 13.27.38.jpeg" alt="Imagem do WhatsApp" class="imagem-site">
 
+<!-- JavaScript Unificado para gerenciar as duas caixas de cópia -->
 <script>
-function mostrarMensagem(){
-    document.getElementById("mensagem").innerHTML = 
-    "Parabéns! Você já conhece os passos básicos para criar e publicar um site.";
-}
+    function copiarTexto(botao, idElemento) {
+        const textarea = document.getElementById(idElemento);
+        const corOriginal = botao.style.backgroundColor;
+        const textoOriginal = botao.innerText;
+        
+        navigator.clipboard.writeText(textarea.value).then(() => {
+            botao.innerText = "✓ Copiado!";
+            botao.style.backgroundColor = "#218838";
+            
+            setTimeout(() => {
+                botao.innerText = textoOriginal;
+                botao.style.backgroundColor = corOriginal;
+            }, 2000);
+        }).catch(err => {
+            console.error("Erro ao copiar: ", err);
+        });
+    }
+
+    function mostrarMensagem(){
+        document.getElementById("mensagem").innerHTML = 
+        "Parabéns! Você já conhece os passos básicos para criar e publicar um site.";
+    }
 </script>
 
 </body>
