@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Criar um Site no Visual Studio Code</title>
+
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body{
+        background:#f4f4f4;
+        color:#333;
+        line-height:1.6;
+    }
+
+    header{
+        background:#0078d7;
+        color:white;
+        text-align:center;
+        padding:30px;
+    }
+
+    nav{
+        background:#005fa3;
+        padding:10px;
+        text-align:center;
+    }
+
+    nav a{
+        color:white;
+        text-decoration:none;
+        margin:0 15px;
+        font-weight:bold;
+    }
+
+    section{
+        max-width:1000px;
+        margin:20px auto;
+        background:white;
+        padding:20px;
+        border-radius:8px;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2{
+        color:#0078d7;
+        margin-bottom:10px;
+    }
+
+    .codigo{
+        background:#272822;
+        color:#f8f8f2;
+        padding:15px;
+        border-radius:5px;
+        overflow-x:auto;
+        margin-top:10px;
+    }
+
+    footer{
+        background:#222;
+        color:white;
+        text-align:center;
+        padding:15px;
+        margin-top:20px;
+    }
+
+    button{
+        background:#0078d7;
+        color:white;
+        border:none;
+        padding:10px 20px;
+        cursor:pointer;
+        border-radius:5px;
+    }
+
+    button:hover{
+        background:#005fa3;
+    }
+
+    /* Estilo para a imagem não quebrar o layout */
+    .imagem-site {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+    }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Guia Inicial para Criar um Site</h1>
+    <p>Aprenda HTML, Visual Studio Code e GitHub Pages</p>
+</header>
+
+<nav>
+    <a href="#instalacao">Instalação</a>
+    <a href="#projeto">Projeto</a>
+    <a href="#codigo">Código HTML</a>
+    <a href="#github">GitHub</a>
+</nav>
+
+<section id="instalacao">
+    <h2>1. Instalação dos Programas</h2> 
+
+    <p><strong>Visual Studio Code</strong></p>
+    <ul>
+        <li>Baixe e instale o VS Code.</li>
+        <li>É um editor gratuito utilizado para desenvolver sites.</li>
+    </ul>
+
+    <br>
+
+    <p><strong>Git</strong></p>
+    <ul>
+        <li>Instale o Git para enviar arquivos ao GitHub.</li>
+        <li>Mantenha as configurações padrão durante a instalação.</li>
+    </ul>
+
+    <br>
+
+    <p><strong>GitHub</strong></p>
+    <ul>
+        <li>Crie uma conta gratuita.</li>
+        <li>Ela será utilizada para publicar seu site na internet.</li>
+    </ul>
+</section>
+
+<section id="projeto">
+    <h2>2. Criando o Projeto</h2> 
+
+    <ol>
+        <li>Crie uma pasta chamada <strong>meu-site</strong>.</li>
+        <li>Abra a pasta no Visual Studio Code.</li>
+        <li>Crie os arquivos:
+            <ul>
+                <li>index.html</li>
+                <li>style.css</li>
+                <li>script.js</li>
+            </ul>
+        </li>
+    </ol>
+</section>
+
+<section id="codigo">
+    <h2>3. Estrutura Básica do HTML</h2> 
+
+    <div class="codigo">
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Meu Primeiro Site&lt;/title&gt;
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+</body>
+</html>
+</pre>
+    </div>
+
+    <p>
+        O arquivo <strong>index.html</strong> é a página principal do site.
+    </p>
+</section>
+
+<section>
+    <h2>4. Visualizando o Site</h2> 
+
+    <p>
+        Instale a extensão <strong>Live Server</strong> no VS Code.
+    </p>
+
+    <ul>
+        <li>Clique em Extensões.</li>
+        <li>Pesquise por Live Server.</li>
+        <li>Instale a extensão.</li>
+        <li>Clique com o botão direito em index.html.</li>
+        <li>Escolha "Open with Live Server".</li>
+    </ul>
+</section>
+
+<section id="github">
+    <h2>5. Publicando no GitHub Pages</h2> 
+
+    <ol>
+        <li>Crie um repositório público.</li>
+        <li>Abra o terminal do VS Code.</li>
+        <li>Digite:</li>
+    </ol>
+
+    <div class="codigo">
+<pre>
+git init
+git add .
+git commit -m "Primeira versão"
+git branch -M main
+git remote add origin URL_DO_REPOSITORIO
+git push -u origin main
+</pre>
+    </div>
+
+    <br>
+
+    <p>
+        Depois vá em:
+    </p>
+
+    <ul>
+        <li>Settings</li>
+        <li>Pages</li>
+        <li>Deploy from a Branch</li>
+        <li>Branch: main</li>
+        <li>Pasta: /(root)</li>
+    </ul>
+
+    <p>
+        Após alguns minutos, o GitHub fornecerá um endereço semelhante a:
+    </p>
+
+    <div class="codigo">
+<pre>
+https://github.io
+</pre>
+    </div>
+</section>
+
+<section>
+    <h2>Desafio Final</h2> 
+
+    <p>Adicione ao seu site:</p>
+
+    <ul>
+        <li>Menu de navegação</li>
+        <li>Imagens</li>
+        <li>Vídeo do YouTube</li>
+        <li>Formulário de contato</li>
+        <li>Mapa do Google Maps</li>
+    </ul>
+
+    <br>
+
+    <button onclick="mostrarMensagem()">
+        Concluir Curso
+    </button>
+
+    <p id="mensagem"></p>
+</section>
+
+<footer>
+    <p>Guia de Introdução ao Desenvolvimento Web com VS Code e GitHub Pages</p>
+</footer>
+
+<!-- A tag abaixo foi corrigida com o caminho completo no src e a descrição no alt -->
+<img src="/home/adevan12/Área de trabalho/Meu primeiro site Olá mundo/imagens/Link para WhatsApp Image 2026-05-27 at 13.27.38.jpeg" alt="Imagem do WhatsApp" class="imagem-site">
+
+<script>
+function mostrarMensagem(){
+    document.getElementById("mensagem").innerHTML = 
+    "Parabéns! Você já conhece os passos básicos para criar e publicar um site.";
+}
+</script>
+
+</body>
+</html>
