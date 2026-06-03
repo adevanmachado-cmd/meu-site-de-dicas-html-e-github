@@ -6,7 +6,7 @@
     <title>Como Criar um Site no Visual Studio Code</title>
     <!-- ESTA LINHA ABAIXO FAZ A DIREÇÃO PARA O ARQUIVO CSS -->
     <link rel="stylesheet" href="style.css">
-     <script src="script.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -69,11 +69,10 @@
     <h2>3. Estrutura Básica do HTML</h2> 
 
     <div class="codigo">
-
-<div class="codigo-box" style="max-width: 600px; margin: 20px auto; font-family: sans-serif;">
-    
-    <!-- Caixa de texto com o Olá Mundo (caracteres especiais convertidos para o navegador ler como texto) -->
-    <textarea id="codigoOlaMundo" readonly style="width: 100%; height: 160px; padding: 15px; background-color: #282c34; color: #abb2bf; border: 1px solid #181a1f; border-radius: 6px; font-family: monospace; font-size: 14px; resize: none; box-sizing: border-box;">&lt;!DOCTYPE html&gt;
+        <div class="codigo-box" style="max-width: 600px; margin: 20px auto; font-family: sans-serif;">
+            
+            <!-- Caixa de texto com o Olá Mundo (caracteres especiais convertidos para o navegador ler como texto) -->
+            <textarea id="codigoOlaMundo" readonly style="width: 100%; height: 160px; padding: 15px; background-color: #282c34; color: #abb2bf; border: 1px solid #181a1f; border-radius: 6px; font-family: monospace; font-size: 14px; resize: none; box-sizing: border-box;">&lt;!DOCTYPE html&gt;
 &lt;html lang="pt-BR"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -83,59 +82,47 @@
     &lt;h1&gt;Olá, Mundo!&lt;/h1&gt;
 &lt;/body&gt;
 &lt;/html&gt;</textarea>
-    
-    <!-- Botão de ação -->
-    <button onclick="copiarCodigoDoSite(this)" style="margin-top: 8px; padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: bold; transition: background 0.2s;">
-        Copiar Código
-    </button>
-
-    <!-- Script que faz a mágica de copiar -->
-    <script>
-        function copiarCodigoDoSite(botao) {
-            const textarea = document.getElementById("codigoOlaMundo");
             
-            // Copia o texto para a área de transferência
-            navigator.clipboard.writeText(textarea.value).then(() => {
-                // Efeito visual de sucesso no botão
-                botao.innerText = "✓ Copiado!";
-                botao.style.backgroundColor = "#218838";
-                
-                // Volta ao normal depois de 2 segundos
-                setTimeout(() => {
-                    botao.innerText = "Copiar Código";
-                    botao.style.backgroundColor = "#28a745";
-                }, 2000);
-            }).catch(err => {
-                console.error("Erro ao copiar: ", err);
-            });
-        }
-    </script>
-</div>
+            <!-- Botão de ação -->
+            <button onclick="copiarCodigoDoSite(this)" style="margin-top: 8px; padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: bold; transition: background 0.2s;">
+                Copiar Código
+            </button>
 
- <section id="meu-jogo">
-    <h2>Meu Projeto do Scratch</h2>
-    <p>Jogue a minha criação direto por aqui:</p>
-    
-    <!-- COLE O CÓDIGO EMBUTIDO DO SCRATCH AQUI EMBAIXO -->
-    <iframe src="https://scratch.mit.edu/projects/1325244048" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-
-<pre>
-&lt;!DOCTYPE html&gt;
-&lt;html lang="pt-BR"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Meu Primeiro Site&lt;/title&gt;
-</head>
-<body>
-    <h1>Olá Mundo!</h1>
-</body>
-</html>
-</pre>
+            <!-- Script que faz a mágica de copiar -->
+            <script>
+                function copiarCodigoDoSite(botao) {
+                    const textarea = document.getElementById("codigoOlaMundo");
+                    
+                    // Copia o texto para a área de transferência
+                    navigator.clipboard.writeText(textarea.value).then(() => {
+                        // Efeito visual de sucesso no botão
+                        botao.innerText = "✓ Copiado!";
+                        botao.style.backgroundColor = "#218838";
+                        
+                        // Volta ao normal depois de 2 segundos
+                        setTimeout(() => {
+                            botao.innerText = "Copiar Código";
+                            botao.style.backgroundColor = "#28a745";
+                        }, 2000);
+                    }).catch(err => {
+                        console.error("Erro ao copiar: ", err);
+                    });
+                }
+            </script>
+        </div>
     </div>
 
     <p>
         O arquivo <strong>index.html</strong> é a página principal do site.
     </p>
+</section>
+
+<section id="meu-jogo">
+    <h2>Meu Projeto do Scratch</h2>
+    <p>Jogue a minha criação direto por aqui:</p>
+    
+    <!-- COLE O CÓDIGO EMBUTIDO DO SCRATCH AQUI EMBAIXO -->
+    <iframe src="https://scratch.mit.edu/projects/1325244048" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
 </section>
 
 <section>
