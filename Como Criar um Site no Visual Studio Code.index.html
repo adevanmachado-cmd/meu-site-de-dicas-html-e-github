@@ -77,19 +77,6 @@
             margin: 0;
         }
 
-        textarea {
-            width: 100%;
-            padding: 12px;
-            background-color: #2d2d2d;
-            color: #f8f8f2;
-            border: 2px solid #e4e4e7;
-            border-radius: 6px;
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
-            line-height: 1.5;
-            resize: vertical;
-        }
-
         button {
             padding: 10px 20px;
             margin-top: 10px;
@@ -98,24 +85,6 @@
             cursor: pointer;
             font-weight: bold;
             transition: background-color 0.3s;
-        }
-
-        .btn-copiar {
-            background-color: #000000;
-            color: white;
-        }
-
-        .btn-copiar:hover {
-            background-color: #333;
-        }
-
-        .btn-link {
-            background-color: #007bff;
-            color: white;
-        }
-
-        .btn-link:hover {
-            background-color: #0056b3;
         }
 
         .btn-concluir {
@@ -151,10 +120,6 @@
             color: #007bff;
         }
     </style>
-    <!-- ESTA LINHA ABAIXO FAZ A DIREÇÃO PARA O ARQUIVO CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!-- LINK PARA O ARQUIVO JAVASCRIPT - ESSENCIAL PARA O GITHUB PAGES -->
-    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -279,10 +244,9 @@ git push -u origin main</pre>
         <li>Mapa do Google Maps</li>
     </ul>
     <br>
-    <button class="btn-concluir" onclick="mostrarMensagem()">
+    <button class="btn-concluir" onclick="alert('Parabéns! Você concluiu o curso!')">
         Concluir Curso
     </button>
-    <p id="mensagem"></p>
 </section>
 
 <footer>
