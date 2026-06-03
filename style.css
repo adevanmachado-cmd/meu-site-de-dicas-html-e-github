@@ -7,7 +7,7 @@
 
 body{
     background:#f4f4f4;
-    color:#33;
+    color:#333;
     line-height:1.6;
 }
 
@@ -52,6 +52,12 @@ h2{
     border-radius:5px;
     overflow-x:auto;
     margin-top:10px;
+}
+
+/* Estilo para textareas ficarem visíveis */
+textarea {
+    color: #000000 !important;
+    background-color: #f4f4f5 !important;
 }
 
 footer{
