@@ -57,7 +57,11 @@ h2{
 /* Estilo para textareas ficarem visíveis */
 textarea {
     color: #000000 !important;
-    background-color: #f4f4f5 !important;
+    background-color: #ffffff !important;
+    font-family: 'Courier New', monospace !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    border: 1px solid #ccc !important;
 }
 
 footer{
