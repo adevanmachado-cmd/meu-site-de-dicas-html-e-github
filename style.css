@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#33;
+    line-height:1.6;
+}
+
+header{
+    background:#0078d7;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+nav{
+    background:#005fa3;
+    padding:10px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+section{
+    max-width:1000px;
+    margin:20px auto;
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h2{
+    color:#0078d7;
+    margin-bottom:10px;
+}
+
+.codigo{
+    background:#272822;
+    color:#f8f8f2;
+    padding:15px;
+    border-radius:5px;
+    overflow-x:auto;
+    margin-top:10px;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+
+button{
+    background:#0078d7;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{
+    background:#005fa3;
+}
+
+/* Estilo para a imagem não quebrar o layout */
+.imagem-site {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
