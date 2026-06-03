@@ -66,10 +66,18 @@
     
     <div class="codigo" style="margin-top: 15px;">
         <!-- Textarea para exibir o código HTML -->
-        <textarea id="codigoOlaMundo" readonly style="width: 100%; height: 200px; padding: 12px; background-color: #f4f4f5; color: #000000; border: 1px solid #e4e4e7; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.5;"></textarea>
+        <textarea id="codigoOlaMundo" readonly style="width: 100%; height: 200px; padding: 12px; background-color: #ffffff; color: #000000; border: 1px solid #e4e4e7; border-radius: 6px; font-family: monospace; font-size: 14px;"><!DOCTYPE html>
+<html>
+<head>
+    <title>Olá Mundo</title>
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+</body>
+</html></textarea>
         
         <!-- Botão de cópia -->
-        <button onclick="copiarTexto(this, 'codigoOlaMundo')" style="margin-top: 10px; padding: 10px 20px; background-color: #000000; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background-color 0.3s ease;">
+        <button onclick="copiarTexto(this, 'codigoOlaMundo')" style="margin-top: 10px; padding: 10px 20px; background-color: #000000; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
             Copiar Código
         </button>
     </div>
@@ -96,15 +104,13 @@
         <li>Digite:</li>
     </ol>
 
-    <div class="codigo">
-<pre>
-git init
+    <div class="codigo" style="max-width: 600px; margin: 20px auto; padding: 15px; background-color: #ffffff; border: 1px solid #e4e4e7; border-radius: 6px;">
+<pre style="color: #000000; background-color: #ffffff; padding: 10px; overflow-x: auto;">git init
 git add .
 git commit -m "Primeira versão"
 git branch -M main
 git remote add origin URL_DO_REPOSITORIO
-git push -u origin main
-</pre>
+git push -u origin main</pre>
     </div>
     <br>
     <p>Depois vá em:</p>
@@ -118,16 +124,14 @@ git push -u origin main
 
     <p>Após alguns minutos, o GitHub fornecerá seu endereço. Use o campo abaixo para copiar o exemplo do link:</p>
 
-    <div class="codigo">
-        <div class="codigo-box" style="max-width: 600px; margin: 20px auto; font-family: sans-serif;">
-            <!-- CAMPO DO LINK DO SITE -->
-            <textarea id="linkGitHub" readonly style="width: 100%; height: 45px; padding: 12px; background-color: #ffffff; color: #000000; border: 1px solid #cccccc; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 14px;"></textarea>
-            
-            <!-- Botão de ação para o link -->
-            <button onclick="copiarLink(this, 'linkGitHub')" style="margin-top: 8px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background-color 0.3s ease;">
-                Copiar Link
-            </button>
-        </div>
+    <div class="codigo" style="max-width: 600px; margin: 20px auto; font-family: sans-serif;">
+        <!-- CAMPO DO LINK DO SITE -->
+        <textarea id="linkGitHub" readonly style="width: 100%; height: 45px; padding: 12px; background-color: #ffffff; color: #000000; border: 1px solid #cccccc; border-radius: 6px; font-family: monospace; font-size: 14px;">https://adevanmachado-cmd.github.io/meu-site</textarea>
+        
+        <!-- Botão de ação para o link -->
+        <button onclick="copiarLink(this, 'linkGitHub')" style="margin-top: 8px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
+            Copiar Link
+        </button>
     </div>
 </section>
 
@@ -142,7 +146,7 @@ git push -u origin main
         <li>Mapa do Google Maps</li>
     </ul>
     <br>
-    <button onclick="mostrarMensagem()">
+    <button onclick="mostrarMensagem()" style="padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
         Concluir Curso
     </button>
     <p id="mensagem"></p>
