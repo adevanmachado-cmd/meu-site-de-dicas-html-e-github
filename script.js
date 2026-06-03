@@ -15,6 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (campoCodigo) {
         campoCodigo.textContent = textoDoCodigo;
     }
+    
+    // Adiciona o link do GitHub Pages ao textarea
+    const campoLink = document.getElementById('linkGitHub');
+    if (campoLink) {
+        campoLink.value = "https://adevanmachado-cmd.github.io/site-do-Adevan-dicas-iniciais-html-e-github/";
+    }
 });
 
 function copiarTexto(botao, idElemento) {
