@@ -6,6 +6,8 @@
     <title>Como Criar um Site no Visual Studio Code</title>
     <!-- ESTA LINHA ABAIXO FAZ A DIREÇÃO PARA O ARQUIVO CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- LINK PARA O ARQUIVO JAVASCRIPT - ESSENCIAL PARA O GITHUB PAGES -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -64,7 +66,7 @@
         <!-- Bloco com fundo cinza claro e texto na cor preta -->
         <pre id="codigoOlaMundo" style="background-color: #f4f4f5; color: #000000; padding: 20px; border: 1px solid #e4e4e7; border-radius: 6px; font-family: monospace; font-size: 14px; overflow-x: auto; margin: 0; line-height: 1.5; min-height: 140px; white-space: pre;"></pre>
         
-        <!-- Botão de cópia -->
+        <!-- Botão de cópia corrigido para a função do script.js -->
         <button onclick="copiarTexto(this, 'codigoOlaMundo')" style="margin-top: 10px; padding: 10px 20px; background-color: #000000; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: bold; transition: background 0.2s;">
             Copiar Código
         </button>
@@ -150,60 +152,6 @@ git push -u origin main
 
 <!-- Imagem interna do projeto -->
 <img src="imagens/whatsapp-image.jpeg" alt="Imagem do WhatsApp" class="imagem-site">
-
-<!-- JavaScript Unificado -->
-<script>
-    // Este texto será inserido automaticamente no campo de cópia na tela
-    const textoDoCodigo = `<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Olá Mundo</title>
-</head>
-<body>
-    <h1>Olá Mundo!</h1>
-</body>
-</html>`;
-
-    // Insere o código na tela assim que a página carrega
-    document.getElementById('codigoOlaMundo').textContent = textoDoCodigo;
-
-    // Função para copiar textos de elementos comuns (ex: <pre>)
-    function copiarTexto(botao, idElemento) {
-        const elemento = document.getElementById(idElemento);
-        const textoParaCopiar = elemento.textContent;
-        const textoOriginal = botao.innerHTML;
-
-        navigator.clipboard.writeText(textoParaCopiar).then(() => {
-            botao.innerHTML = "✓ Copiado!";
-            botao.style.backgroundColor = "#218838";
-            setTimeout(() => {
-                botao.innerHTML = textoOriginal;
-                botao.style.backgroundColor = "#000000";
-            }, 2000);
-        });
-    }
-
-    // Função para copiar textos de elementos de formulário (ex: <textarea>)
-    function copiarLink(botao, idElemento) {
-        const textarea = document.getElementById(idElemento);
-        const textoOriginal = botao.innerText;
-        
-        navigator.clipboard.writeText(textarea.value).then(() => {
-            botao.innerText = "✓ Copiado!";
-            botao.style.backgroundColor = "#218838";
-            setTimeout(() => {
-                botao.innerText = textoOriginal;
-                botao.style.backgroundColor = "#007bff";
-            }, 2000);
-        });
-    }
-
-    function mostrarMensagem(){
-        document.getElementById("mensagem").innerHTML = 
-        "<strong>Parabéns!</strong> Você já conhece os passos básicos para criar e publicar um site.";
-    }
-</script>
 
 </body>
 </html>
