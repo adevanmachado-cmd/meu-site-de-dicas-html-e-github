@@ -123,6 +123,46 @@
             background-color: #218838;
         }
 
+        /* Estilos do botão de curtir */
+        .btn-curtir {
+            background-color: #ffffff;
+            color: #ff1493;
+            border: 2px solid #ff1493;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-curtir:hover {
+            background-color: #ff1493;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .btn-curtir.curtido {
+            background-color: #ff1493;
+            color: white;
+        }
+
+        .contador-curtidas {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .secao-curtir {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+
         footer {
             text-align: center;
             background-color: #333;
@@ -283,12 +323,62 @@ git push -u origin main</pre>
     </button>
 </section>
 
+<!-- Seção de curtir -->
+<section class="secao-curtir">
+    <h2>Gostou do Conteúdo?</h2>
+    <p>Clique no botão abaixo para curtir este guia!</p>
+    <button class="btn-curtir" id="btnCurtir" onclick="toggleCurtida()">
+        <span class="coracao">🤍</span>
+        <span class="contador-curtidas" id="contadorCurtidas">0</span>
+    </button>
+</section>
+
 <footer>
     <p>Guia de Introdução ao Desenvolvimento Web com VS Code e GitHub Pages</p>
 </footer>
 
 <!-- Imagem interna do projeto -->
 <img src="imagens/whatsapp-image.jpeg" alt="Imagem do WhatsApp" class="imagem-site">
+
+<script>
+    // Função para alternar o estado de curtida
+    function toggleCurtida() {
+        const btn = document.getElementById('btnCurtir');
+        const contador = document.getElementById('contadorCurtidas');
+        const coracao = btn.querySelector('.coracao');
+        
+        // Verificar se já foi curtido
+        const foiCurtido = btn.classList.contains('curtido');
+        
+        if (foiCurtido) {
+            // Remover curtida
+            btn.classList.remove('curtido');
+            coracao.textContent = '🤍';
+            contador.textContent = parseInt(contador.textContent) - 1;
+            localStorage.removeItem('pageCurtida');
+        } else {
+            // Adicionar curtida
+            btn.classList.add('curtido');
+            coracao.textContent = '❤️';
+            contador.textContent = parseInt(contador.textContent) + 1;
+            localStorage.setItem('pageCurtida', 'true');
+        }
+    }
+    
+    // Carregar estado de curtida ao abrir a página
+    window.addEventListener('DOMContentLoaded', function() {
+        const foiCurtido = localStorage.getItem('pageCurtida');
+        const btn = document.getElementById('btnCurtir');
+        const contador = document.getElementById('contadorCurtidas');
+        const coracao = btn.querySelector('.coracao');
+        
+        if (foiCurtido) {
+            btn.classList.add('curtido');
+            coracao.textContent = '❤️';
+            contador.textContent = '1';
+        }
+    });
+</script>
 
 </body>
 </html>
